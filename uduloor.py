@@ -18,7 +18,16 @@ message_template = """From: Uduloor <pseudo@infoaed.ee>
 To: %s
 Subject: Uduloor
 
-Sinu pseudonüüm hääletamisel on %s.
+Sinu pseudonüüm hääletamisel on:
+
+* %s
+
+Hääletus toimub aadressil
+
+* https://etherpad.wikimedia.org/p/wmee-juhatus
+
+Siiralt "jne"
+Uduloor
 """
 
 voters_in_text = """tramm@infoaed.ee
@@ -39,7 +48,7 @@ anemone
 alcea
 """
 
-Pseudonym = namedtuple('Pseudonym', ['public', 'private'])
+pseudo_id = namedtuple('pseudo_id', ['pseudonym', 'code', 'cryptonym'])
 
 voter_list = voters_in_text.strip().splitlines()
 word_list = unique_words.strip().splitlines()
@@ -56,28 +65,33 @@ print()
 
 print("Distributing pseudonyms...\n")
 
+pseudo = []
+
+for i in range(len(voter_list)):
+  current = pseudo_id(random_words[i], str(random_keys[i]), random_words[i] + str(random_keys[i]))
+  pseudo.append(current)
+
 i = -1
 
 try:
     
-  server = smtplib.SMTP_SSL(url, port, context=ssl.create_default_context())
-  server.login(username, password)
+  #server = smtplib.SMTP_SSL(url, port, context=ssl.create_default_context())
+  #server.login(username, password)
   
   for i in range(len(voter_list)):
 
-    pseudonym = Pseudonym(random_words[i], random_words[i] + str(random_keys[i]))
     receiver = voter_list[i].split()[0]
-    message = message_template % (receiver, pseudonym.private)
+    message = message_template % (receiver, pseudo[i].cryptonym)
     
-    print("*", pseudonym.public)
+    print("*", pseudo[i].pseudonym)
     #print(message)
     #print("===")
     
-    server.sendmail(sender, receiver, message.encode("utf8"))
+    #server.sendmail(sender, receiver, message.encode("utf8"))
     
     time.sleep(1)
     
-  server.quit()
+  #server.quit()
   
   print()
   
@@ -88,3 +102,20 @@ except Exception as e:
   print("Delivered %d pseudonyms." % (i+1))
   
   print("ERROR:", e)
+
+print()
+
+print("Write 'end' to close voting and publish audit information.")
+
+print()
+
+while(input("> ") != "end"):
+  pass
+
+print()
+print("Cryptonyms:")
+
+print()
+
+for i in range(len(voter_list)):
+    print("*", pseudo[i].cryptonym)
