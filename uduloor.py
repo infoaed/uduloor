@@ -46,6 +46,18 @@ iris
 asparagus
 anemone
 alcea
+hepatica
+trollius
+ranunculus
+caltha
+rosa
+trifolium
+melampyrum
+syringa
+solanum
+ligularia
+curcuma
+antirrhinum
 """
 
 pseudo_id = namedtuple('pseudo_id', ['pseudonym', 'code', 'cryptonym'])
@@ -60,6 +72,8 @@ print("There is %d voters in upcoming election:\n" % len(voter_list))
 
 for voter in voter_list:
   print(voter)
+
+random.shuffle(voter_list)
 
 print()
 
@@ -84,8 +98,6 @@ try:
     message = message_template % (receiver, pseudo[i].cryptonym)
     
     print("*", pseudo[i].pseudonym)
-    #print(message)
-    #print("===")
     
     #server.sendmail(sender, receiver, message.encode("utf8"))
     
