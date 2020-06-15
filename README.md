@@ -17,7 +17,7 @@ This for use in annual meetings of NGOs etc where you can presume certain amount
 
 ## TODO
 
-* Convert it into a simple web service for testing.
+* Convert it into a [simple web service](https://github.com/infoaed/pseudovote) for testing.
 * Maybe add config files and some options for messages.
 * Distributing pseudonyms for multiple rounds of voting.
 * Countdown for publishing list of pseudonyms with control codes.
