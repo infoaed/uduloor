@@ -2,8 +2,10 @@
 
 # https://myaccount.google.com/lesssecureapps
 
+from random import SystemRandom
+
 import smtplib, ssl
-import time, random
+import time
 
 from collections import namedtuple
 
@@ -80,6 +82,8 @@ pseudo_id = namedtuple('pseudo_id', ['pseudonym', 'code', 'cryptonym'])
 
 voter_list = voters_in_text.strip().splitlines()
 word_list = unique_words.strip().splitlines()
+
+random = SystemRandom()
 
 random_words = random.sample(word_list, len(voter_list))
 random_keys = random.sample(code_range, len(voter_list))
