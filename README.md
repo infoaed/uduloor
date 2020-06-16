@@ -1,9 +1,11 @@
 # uduloor
 Identity pseudonymizer for conducting transparent and auditable secret voting on Internet
 
+![Screenshot of a test run](uduloor-screenshot.png)
+
 ## How to use?
 
-* Download the python source.
+* Download the Python source.
 * Add list of e-mails into source.
 * Add list of words to choose pseudonyms from.
 * Add configuration for e-mail server.
