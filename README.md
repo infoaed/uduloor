@@ -15,7 +15,7 @@ Identity pseudonymizer for conducting transparent and auditable secret voting on
 * Maybe require each voter to check if the pseydonymous vote is cast correctly. 
 * Publicly tally the votes cast in text editor.
 
-This for use in annual meetings of NGOs etc where you can presume certain amount of trust among participants, that is no false claims to annul the vote and sophisticated technical attacks on infrastructure like e-mail servers, server logs etc. The principle of the process is to make it as transparent and auditable as possible with simple means available to every user of Internet.
+This is for use in annual meetings of NGOs etc where you can presume certain amount of trust among participants, that is no false claims to annul the vote and sophisticated technical attacks on infrastructure like e-mail servers, server logs etc. The principle of the process is to make it as transparent and auditable as possible with simple means available to every user of Internet.
 
 ## TODO
 
