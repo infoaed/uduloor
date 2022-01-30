@@ -12,7 +12,7 @@ Identity pseudonymizer for conducting transparent and auditable secret voting on
 * Run the program on neutral computer with the oversight of observers, interested parties etc.
 * Conduct voting on any reasonably neutral and independent collaborative text editor on Internet.
 * Maybe require each voter to cast a vote as well as abstention.
-* Maybe require each voter to check if the pseydonymous vote is cast correctly. 
+* Maybe require each voter to check if the pseudonymous vote is cast correctly. 
 * Publicly tally the votes cast in text editor.
 
 This is for use in annual meetings of NGOs etc where you can presume certain amount of trust among participants, that is no false claims to annul the vote and sophisticated technical attacks on infrastructure like e-mail servers, server logs etc. The principle of the process is to make it as transparent and auditable as possible with simple means available to every user of Internet.
