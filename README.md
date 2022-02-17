@@ -19,7 +19,11 @@ This is for use in annual meetings of NGOs etc where you can presume certain amo
 
 ## TODO
 
-* Convert it into a [simple web service](https://github.com/infoaed/pseudovote) for testing.
-* Maybe add config files and some options for messages.
-* Distributing pseudonyms for multiple rounds of voting.
-* Countdown for publishing list of pseudonyms with control codes.
+* [x] Convert it into a [simple web service](https://github.com/infoaed/pseudovote) for testing.
+* [ ] Design it to be recommended ballot delivery script for the web service, optional use of API.
+* [ ] Resending bouncing e-mails to another address?
+* [ ] Other delivery options besides e-mail.
+* [ ] PGP encryption and signatures in parts of the process.
+* [ ] Maybe add config files and some options for messages.
+* [ ] Distributing pseudonyms for multiple rounds of voting.
+* [ ] Countdown for publishing list of pseudonyms with control codes.
