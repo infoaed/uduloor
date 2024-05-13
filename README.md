@@ -26,4 +26,4 @@ This is for use in annual meetings of NGOs etc where you can presume certain amo
 * [ ] PGP encryption and signatures in parts of the process.
 * [ ] Maybe add config files and some options for messages.
 * [ ] Distributing pseudonyms for multiple rounds of voting.
-* [ ] Countdown for publishing list of pseudonyms with control codes.
+* [ ] Countdown for publishing list of cryptonyms.
